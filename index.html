@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lufthansa Group PTFS</title>
+<style>
+:root {
+  --navy: #061a35;
+  --blue: #002f6c;
+  --gold: #f5c400;
+  --light: #f3f6fa;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--light);
+  color: #152238;
+}
+header {
+  background: var(--navy);
+  color: white;
+  padding: 22px 7%;
+  border-bottom: 4px solid var(--gold);
+}
+.brand {
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.brand span { color: var(--gold); }
+header p { color: #cbd7e8; margin-bottom: 0; }
+nav {
+  background: var(--blue);
+  padding: 14px 7%;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover { color: var(--gold); }
+.hero {
+  background: linear-gradient(120deg, #061a35, #064b87);
+  color: white;
+  padding: 65px 7%;
+}
+.hero h1 { font-size: clamp(32px, 5vw, 54px); margin: 0 0 12px; }
+.hero p { color: #dce8f6; font-size: 18px; }
+main { max-width: 1200px; margin: auto; padding: 25px; }
+section { margin: 35px 0; }
+h2 {
+  border-left: 5px solid var(--gold);
+  padding-left: 12px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 12px #10294b12;
+  border: 1px solid #e0e7ef;
+}
+.card h3 { margin-top: 0; color: var(--blue); }
+.code { color: #53657b; font-size: 13px; }
+.flight-route {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 12px 0;
+}
+.status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e5edf7;
+  font-size: 12px;
+  font-weight: bold;
+}
+.status.scheduled { background: #fff1bd; color: #775900; }
+.status.inflight { background: #d9ecff; color: #004c91; }
+.status.landed { background: #d9f5e5; color: #14653b; }
+.notice {
+  background: #fff8d9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #eed77d;
+}
+footer {
+  margin-top: 40px;
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+footer p { color: #cbd7e8; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">LUFTHANSA <span>GROUP</span></div>
+  <p>PTFS Virtual Airline · Official Operations Portal</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#flights">Flights</a>
+  <a href="#fleet">Fleet</a>
+  <a href="#airports">Airports</a>
+  <a href="#admin">Administration</a>
+</nav>
+
+<div class="hero" id="home">
+  <h1>Welcome aboard.</h1>
+  <p>Connecting our virtual world, one flight at a time.</p>
+</div>
+
+<main>
+  <section id="flights">
+    <h2>Flight Operations</h2>
+    <p>View current and upcoming Lufthansa Group PTFS flights.</p>
+    <div id="flight-list" class="grid">
+      <div class="card">
+        <h3>Flight information</h3>
+        <p>No live flight data is connected yet.</p>
+        <p class="code">Flight data will appear here after database setup.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="fleet">
+    <h2>Our Fleet</h2>
+    <div class="grid">
+      <div class="card"><h3>Airbus A320</h3><p>Short and medium-haul operations.</p></div>
+      <div class="card"><h3>Airbus A330</h3><p>Long-haul operations.</p></div>
+      <div class="card"><h3>Airbus A340</h3><p>Long-haul operations.</p></div>
+      <div class="card"><h3>Airbus A350</h3><p>Next-generation long-haul aircraft.</p></div>
+      <div class="card"><h3>Airbus A380</h3><p>High-capacity long-haul operations.</p></div>
+      <div class="card"><h3>Boeing 747</h3><p>Long-haul operations.</p></div>
+      <div class="card"><h3>Boeing 777</h3><p>Long-haul operations.</p></div>
+      <div class="card"><h3>Boeing 787</h3><p>Modern long-haul operations.</p></div>
+      <div class="card"><h3>Boeing 777F</h3><p>Dedicated cargo operations.</p></div>
+    </div>
+  </section>
+
+  <section id="airports">
+    <h2>Our Airports</h2>
+    <div class="grid">
+      <div class="card"><h3>Greater Rockford</h3><p class="code">IRFD</p></div>
+      <div class="card"><h3>Mellor</h3><p class="code">IMLR</p></div>
+      <div class="card"><h3>Southampton</h3><p class="code">ISAU</p></div>
+      <div class="card"><h3>Larnaca</h3><p class="code">ILAR</p></div>
+      <div class="card"><h3>Paphos</h3><p class="code">IPAP</p></div>
+      <div class="card"><h3>Izolani</h3><p class="code">IZOL</p></div>
+      <div class="card"><h3>Perth</h3><p class="code">IPPH</p></div>
+      <div class="card"><h3>Orenji Tokyo</h3><p class="code">ITKO</p></div>
+      <div class="card"><h3>Keflavik International</h3><p class="code">IKFL</p></div>
+    </div>
+  </section>
+
+  <section id="admin">
+    <h2>Administration</h2>
+    <div class="notice">
+      <strong>Administrator access is not configured yet.</strong>
+      <p>The secure admin panel and shared flight database will be connected in the next setup step.</p>
+      <p>Once configured, authorized administrators will be able to add, edit and delete flights and set their status to Scheduled, In Flight or Landed.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <strong>LUFTHANSA GROUP PTFS</strong>
+  <p>Virtual airline operations · Not affiliated with the real Lufthansa Group</p>
+</footer>
+
+</body>
+</html>
